@@ -1,4 +1,5 @@
-import { FaLinkedinIn } from "react-icons/fa"
+import { Mail } from "lucide-react"
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 import { SiGithub } from "react-icons/si"
 
 import { InteractiveButton } from "@/components/interactive-button"
@@ -37,6 +38,26 @@ export function SiteFooter() {
                 className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
               >
                 <FaLinkedinIn className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </InteractiveButton>
+            <InteractiveButton>
+              <a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp chat"
+                className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
+              >
+                <FaWhatsapp className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </InteractiveButton>
+            <InteractiveButton>
+              <a
+                href={`mailto:${socialLinks.email}`}
+                aria-label="Send email"
+                className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
               </a>
             </InteractiveButton>
           </div>

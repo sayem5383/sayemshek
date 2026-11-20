@@ -11,6 +11,7 @@ export const navLinks = [
 export const socialLinks = {
   github: "https://github.com/sayem5383",
   linkedin: "https://www.linkedin.com/in/sayemshek5383",
+  twitter: "https://x.com/sayem_5383",
   email: "sayemshek5383@gmail.com",
   phone: "+8801815812911",
   whatsapp: "https://wa.me/8801815812911",

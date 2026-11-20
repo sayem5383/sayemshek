@@ -29,11 +29,12 @@ export function AboutSection() {
               <div className="glass-card relative h-full w-full rounded-[1.8rem] p-2">
                 <div className="relative h-full w-full overflow-hidden rounded-[1.35rem]">
                   <Image
-                    src="/images/sayem.webp"
+                    src="/images/about-sayem.webp"
                     alt="Sayem Shek"
                     fill
+                    unoptimized
                     sizes="(max-width: 1024px) 80vw, 380px"
-                    className="object-cover"
+                    className="object-contain"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08080a]/55 via-transparent to-transparent" />
                 </div>

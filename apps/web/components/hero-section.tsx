@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { ArrowRight, Download, MapPin } from "lucide-react"
-import { FaLinkedinIn } from "react-icons/fa"
+import { ArrowRight, Download, Mail, MapPin } from "lucide-react"
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 import { SiGithub } from "react-icons/si"
 
 import { InteractiveButton } from "@/components/interactive-button"
@@ -105,6 +105,22 @@ export function HeroSection() {
                 >
                   <FaLinkedinIn className="h-4.5 w-4.5" aria-hidden="true" />
                 </a>
+                <a
+                  href={socialLinks.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp chat"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
+                >
+                  <FaWhatsapp className="h-4.5 w-4.5" aria-hidden="true" />
+                </a>
+                <a
+                  href={`mailto:${socialLinks.email}`}
+                  aria-label="Send email"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
+                >
+                  <Mail className="h-4.5 w-4.5" aria-hidden="true" />
+                </a>
               </div>
             </div>
           </Reveal>
@@ -119,12 +135,13 @@ export function HeroSection() {
               <div className="absolute inset-[9%] rounded-full border border-orange-500/10" />
               <div className="animate-float relative h-full w-full overflow-hidden rounded-full border-2 border-orange-400/35 bg-[#111114] shadow-[0_0_70px_rgba(255,107,26,0.22)]">
                 <Image
-                  src="/images/sayem.webp"
+                  src="/images/hero-sayem.webp"
                   alt="Sayem Shek"
                   fill
                   priority
+                  unoptimized
                   sizes="(max-width: 1024px) 80vw, 430px"
-                  className="object-cover"
+                  className="object-contain"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08080a]/45 via-transparent to-orange-300/10" />
               </div>

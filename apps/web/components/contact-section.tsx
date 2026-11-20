@@ -1,5 +1,6 @@
 import { ArrowUpRight, Mail } from "lucide-react"
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import type { LucideIcon } from "lucide-react"
 
 import { InteractiveButton } from "@/components/interactive-button"
@@ -13,7 +14,7 @@ type ContactCard = {
   value: string
   href: string
   button: string
-  icon: LucideIcon | typeof FaWhatsapp
+  icon: LucideIcon | typeof FaWhatsapp | typeof FaXTwitter
   color: string
   external: boolean
 }
@@ -46,6 +47,15 @@ const cards: ContactCard[] = [
     color: "#25d366",
     external: true,
   },
+  {
+    label: "X (Twitter)",
+    value: "@sayem_5383",
+    href: socialLinks.twitter,
+    button: "Visit Profile",
+    icon: FaXTwitter,
+    color: "#e7e9ea",
+    external: true,
+  },
 ]
 
 export function ContactSection() {
@@ -62,7 +72,7 @@ export function ContactSection() {
           subtitle="Feel free to reach out! I'm always open to discussing new projects, opportunities, or just a friendly chat."
         />
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {cards.map((card, index) => {
             const Icon = card.icon
             return (
