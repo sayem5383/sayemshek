@@ -1,19 +1,29 @@
-import { Button } from "@workspace/ui/components/button"
+import { AboutSection } from "@/components/about-section"
+import { BackgroundEffects } from "@/components/background-effects"
+import { ContactSection } from "@/components/contact-section"
+import { HeroSection } from "@/components/hero-section"
+import { JourneySection } from "@/components/journey-section"
+import { ProjectsSection } from "@/components/projects-section"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
+import { SkillsSection } from "@/components/skills-section"
+import { ToolsSection } from "@/components/tools-section"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <BackgroundEffects />
+      <SiteHeader />
+      <main className="page-enter">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ToolsSection />
+        <ProjectsSection />
+        <JourneySection />
+        <ContactSection />
+      </main>
+      <SiteFooter />
+    </>
   )
 }

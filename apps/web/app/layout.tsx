@@ -1,29 +1,49 @@
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 
 import "@workspace/ui/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@workspace/ui/lib/utils";
+import "./portfolio.css"
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const metadata: Metadata = {
+  title: "Sayem Shek — Web Developer",
+  description:
+    "Sayem Shek is a web developer who builds modern, high-performance websites using HTML, CSS, JavaScript, React, Next.js and more.",
+  keywords: [
+    "Sayem Shek",
+    "web developer",
+    "frontend developer",
+    "React developer",
+    "Next.js developer",
+    "portfolio",
+    "Bangladesh",
+  ],
+  authors: [{ name: "Sayem Shek" }],
+  openGraph: {
+    type: "website",
+    title: "Sayem Shek — Web Developer",
+    description:
+      "Modern, high-performance websites built with HTML, CSS, JavaScript, React and Next.js.",
+    siteName: "Sayem Shek",
+  },
+  robots: { index: true, follow: true },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#08080a",
+  width: "device-width",
+  initialScale: 1,
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className={`dark ${geist.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen bg-[#08080a] font-sans text-white antialiased">
+        {children}
       </body>
     </html>
   )
