@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-28 sm:pt-32"
+      className="hero-section-bg relative flex min-h-screen items-center overflow-hidden pb-20 pt-28 sm:pt-32"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12">
         <div className="relative z-10">

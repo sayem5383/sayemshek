@@ -81,6 +81,42 @@ section[id] {
   color: transparent;
 }
 
+/* Section backdrops tuned to the site palette (--ink #08080a, --brand-orange #ff6b1a) */
+.hero-section-bg {
+  background:
+    radial-gradient(
+      ellipse 62% 58% at 78% 36%,
+      rgba(255, 107, 26, 0.09),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 48% 42% at 10% 88%,
+      rgba(255, 107, 26, 0.055),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 15, 19, 0.72) 0%,
+      rgba(8, 8, 10, 0.34) 55%,
+      rgba(8, 8, 10, 0.72) 100%
+    );
+}
+
+.contact-section-bg {
+  background:
+    radial-gradient(
+      ellipse 58% 62% at 50% 48%,
+      rgba(255, 107, 26, 0.075),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 8, 10, 0.18) 0%,
+      rgba(14, 14, 18, 0.78) 46%,
+      rgba(8, 8, 10, 0.28) 100%
+    );
+}
+
 .orange-glow {
   box-shadow: 0 0 30px rgba(255, 107, 26, 0.28);
 }

@@ -60,7 +60,7 @@ const cards: ContactCard[] = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative py-24 sm:py-28 lg:py-32">
+    <section id="contact" className="contact-section-bg relative py-24 sm:py-28 lg:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 h-[26rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-600/[0.07] blur-[110px]"

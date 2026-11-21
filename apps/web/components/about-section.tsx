@@ -34,7 +34,7 @@ export function AboutSection() {
                     fill
                     unoptimized
                     sizes="(max-width: 1024px) 80vw, 380px"
-                    className="object-contain"
+                    className="object-cover"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08080a]/55 via-transparent to-transparent" />
                 </div>
