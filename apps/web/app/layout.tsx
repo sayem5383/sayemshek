@@ -8,13 +8,13 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "Sayem Shek — Web Developer",
+  title: "Sayem Shek — Frontend Developer",
   description:
-    "Sayem Shek is a web developer who builds modern, high-performance websites using HTML, CSS, JavaScript, React, Next.js and more.",
+    "Sayem Shek is a frontend developer who builds modern, high-performance websites using HTML, CSS, JavaScript, React, Next.js and more.",
   keywords: [
     "Sayem Shek",
-    "web developer",
     "frontend developer",
+    "web developer",
     "React developer",
     "Next.js developer",
     "portfolio",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Sayem Shek" }],
   openGraph: {
     type: "website",
-    title: "Sayem Shek — Web Developer",
+    title: "Sayem Shek — Frontend Developer",
     description:
       "Modern, high-performance websites built with HTML, CSS, JavaScript, React and Next.js.",
     siteName: "Sayem Shek",

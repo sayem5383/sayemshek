@@ -45,7 +45,7 @@ export function SiteFooter() {
                 href={socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp chat"
+                aria-label="Chat on WhatsApp"
                 className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400/40 hover:text-orange-300"
               >
                 <FaWhatsapp className="h-4 w-4" aria-hidden="true" />

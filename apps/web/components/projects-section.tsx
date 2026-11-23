@@ -20,8 +20,11 @@ export function ProjectsSection() {
         <div className="grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
-              <Tilt3D max={8}>
-                <article className="glass-card group flex h-full flex-col">
+              <Tilt3D max={8} glare>
+                <article
+                  data-cursor="hover"
+                  className="glass-card project-card group flex h-full flex-col"
+                >
                   <div className="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-[#0d0d11]">
                     <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.06]">
                       <ProjectPreview variant={project.preview} />

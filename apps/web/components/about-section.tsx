@@ -52,7 +52,9 @@ export function AboutSection() {
             <Reveal delay={0.1}>
               <p className="text-lg leading-9 text-white/65 sm:text-xl sm:leading-10">
                 I&apos;m a{" "}
-                <span className="font-semibold text-white">passionate web developer</span>{" "}
+                <span className="font-semibold text-white">
+                  passionate frontend developer
+                </span>{" "}
                 who loves to turn ideas into fast, tidy, and user-friendly
                 websites. I enjoy working with modern web technologies and
                 always try to learn something new.

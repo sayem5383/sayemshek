@@ -4,6 +4,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 
 import { InteractiveButton } from "@/components/interactive-button"
+import { ScrollProgress } from "@/components/scroll-progress"
 import { navLinks } from "@/lib/site-data"
 
 export function SiteHeader() {
@@ -53,19 +54,20 @@ export function SiteHeader() {
           : "border-transparent bg-transparent"
       }`}
     >
+      <ScrollProgress />
       <div className="mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-12">
         <a
           href="#home"
-          className="group flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
-          aria-label="Sayem Shek — back to top"
+          className="group flex min-w-0 items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+          aria-label="SAYEM SHEK — back to top"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-sm font-black text-white shadow-lg shadow-orange-900/40">
+          <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-sm font-black text-white shadow-lg shadow-orange-900/40">
             S
             <span className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </span>
-          <span className="text-lg font-semibold tracking-tight text-white">
-            Sayem<span className="text-orange-400">.</span>
+          <span className="whitespace-nowrap text-[15px] font-bold uppercase tracking-[0.06em] text-white transition-colors duration-300 group-hover:text-white/90 sm:text-base">
+            SAYEM <span className="text-orange-400">SHEK</span>
           </span>
         </a>
 

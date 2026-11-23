@@ -24,14 +24,15 @@ export function Reveal({
     return () => window.clearTimeout(timer)
   }, [])
 
-  const target = reduceMotion || shown ? { opacity: 1, y: 0 } : undefined
+  const visible = { opacity: 1, y: 0, scale: 1 }
+  const shouldAnimate = !reduceMotion && !shown
 
   return (
     <motion.div
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y }}
-      animate={target}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={shouldAnimate ? { opacity: 0, y, scale: 0.985 } : false}
+      animate={reduceMotion || shown ? visible : undefined}
+      whileInView={visible}
       onViewportEnter={() => setShown(true)}
       viewport={{ once: true, amount: 0.15 }}
       transition={{

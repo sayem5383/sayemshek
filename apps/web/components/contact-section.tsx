@@ -17,6 +17,7 @@ type ContactCard = {
   icon: LucideIcon | typeof FaWhatsapp | typeof FaXTwitter
   color: string
   external: boolean
+  buttonIcon?: typeof FaWhatsapp
 }
 
 const cards: ContactCard[] = [
@@ -40,9 +41,10 @@ const cards: ContactCard[] = [
   },
   {
     label: "WhatsApp",
-    value: socialLinks.phone,
+    value: "Message me directly",
     href: socialLinks.whatsapp,
-    button: "Chat Now",
+    button: "Chat on WhatsApp",
+    buttonIcon: FaWhatsapp,
     icon: FaWhatsapp,
     color: "#25d366",
     external: true,
@@ -75,6 +77,7 @@ export function ContactSection() {
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {cards.map((card, index) => {
             const Icon = card.icon
+            const ButtonIcon = card.buttonIcon
             return (
               <Reveal key={card.label} delay={index * 0.1}>
                 <Tilt3D max={7}>
@@ -98,13 +101,17 @@ export function ContactSection() {
                     <InteractiveButton className="mt-auto inline-flex">
                       <a
                         href={card.href}
+                        aria-label={card.label === "WhatsApp" ? "Chat on WhatsApp" : undefined}
                         {...(card.external
                           ? { target: "_blank", rel: "noopener noreferrer" }
                           : {})}
-                        className="inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/25 bg-orange-500/[0.08] px-5 py-3 text-sm font-semibold text-orange-200 transition-all duration-300 hover:border-orange-400/60 hover:bg-orange-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-orange-400/25 bg-orange-500/[0.08] px-5 py-3 text-center text-sm font-semibold text-orange-200 transition-all duration-300 hover:border-orange-400/60 hover:bg-orange-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300"
                       >
+                        {ButtonIcon ? (
+                          <ButtonIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                        ) : null}
                         {card.button}
-                        <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                        <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
                       </a>
                     </InteractiveButton>
                   </article>
